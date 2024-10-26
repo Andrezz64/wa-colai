@@ -2,7 +2,7 @@ export default function RegisterPage() {
     return (
         <main>
             <div>
-                <h1>Quer colar</h1>
+                <h1>Quer co</h1>
                 <form>
                     <label>
                         Username
