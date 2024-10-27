@@ -10,3 +10,11 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+.input {
+  padding: 0.5rem;
+  input: #131313;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, #4E187D, #131313);
+  border: 2px solid #8434CB; 
+}
