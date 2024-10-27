@@ -52,7 +52,7 @@ export default function RegisterPage() {
             height={130}
             src="/logoRegister.svg"
             alt="Logo de Registro"
-            objectFit="cover"
+         
           />
         </header>
         <div className="mx-4 sm:mx-10">
@@ -64,7 +64,6 @@ export default function RegisterPage() {
                 height={10}
                 src="/backRegister.png"
                 alt="Imagem de fundo"
-                objectFit="cover"
               />
             </Link>
             <h1 className="text-3xl sm:text-4xl">
