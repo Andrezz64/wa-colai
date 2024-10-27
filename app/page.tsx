@@ -1,6 +1,5 @@
-
-import Image from "next/image";
 'use client'
+import Image from "next/image";
 import { InstagramLogo } from "@phosphor-icons/react"
 import Link from 'next/link'
 
@@ -22,8 +21,6 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-8 flex gap-4 640px:gap-6 w-[80vw] max-w-[480px] 640px:max-w-[600px] 1024px:max-w-[800px] mx-auto">
-
-              <Link href="/register" className="flex items-center justify-center p-2 bg-roxoBtn w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
 
               <Link href={"/login"} className="p-2 bg-roxoBtn text-center w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
 
@@ -113,7 +110,7 @@ export default function Home() {
                 Curta o trajeto economizando tempo e dinheiro.
               </span>
             </h3>
-            <Link href= "./register"  className="mt-5 p-2 bg-roxoBtn w-[50vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
+            <Link href= "./register"  className="mt-5 text-center p-2 bg-roxoBtn w-[50vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
               Quero Colar
             </Link>
           </div>
@@ -138,7 +135,7 @@ export default function Home() {
               <li>EmailRealTop@dominioreal.com</li>
             </ul>
               <ul className="flex flex-col">
-              <a href=""className="flex items-center"><InstagramLogo size={23} />@rollbackalea</a>
+              <a href="/"className="flex items-center"><InstagramLogo size={23} />@rollbackalea</a>
               
               </ul>
           </div>

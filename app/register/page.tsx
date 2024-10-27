@@ -1,21 +1,50 @@
 "use client";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; // Importando o Link
+import Link from "next/link";
+
+interface FormData {
+  nome: string;
+  email: string;
+  telefone: string;
+  universidade: string;
+  curso: string;
+  turno: string;
+  senha: string;
+  confirmarSenha: string;
+  modeloCarro?: string;
+  placaCarro?: string;
+  corCarro?: string;
+}
 
 export default function RegisterPage() {
+  const [formData, setFormData] = useState<FormData>({
+    nome: "",
+    email: "",
+    telefone: "",
+    universidade: "",
+    curso: "",
+    turno: "",
+    senha: "",
+    confirmarSenha: "",
+    modeloCarro: "",
+    placaCarro: "",
+    corCarro: "",
+  });
+  
   const [showCarDetails, setShowCarDetails] = useState(false);
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = (e:any) => {
+    e.preventDefault()
+    console.log(formData)
+  }
   return (
-    <main className="">
+    <main>
       <section className="flex flex-col">
         <header className="flex items-center justify-center mt-10">
           <Image
@@ -42,23 +71,23 @@ export default function RegisterPage() {
               Quer <span className="text-roxoText font-bold">Colar</span>?
             </h1>
           </div>
-          <form className="flex flex-col justify-center p-4 sm:p-10 gap-5">
+          <form onSubmit={handleSubmit} className="flex flex-col justify-center p-4 sm:p-10 gap-5">
             <h1 className="text-xl sm:text-2xl">Dados Pessoais</h1>
             <label className="flex flex-col">
               Nome:
-              <input type="text" required className="input" />
+              <input type="text" name="nome" value={formData.nome} onChange={handleChange} required className="input" />
             </label>
             <label className="flex flex-col">
               Email:
-              <input type="email" required className="input" />
+              <input type="email" name="email" value={formData.email} onChange={handleChange} required className="input" />
             </label>
             <label className="flex flex-col">
               Telefone:
-              <input type="tel" required className="input" />
+              <input type="tel" name="telefone" value={formData.telefone} onChange={handleChange} required className="input" />
             </label>
             <label className="flex flex-col">
               Universidade:
-              <Select>
+              <Select value={formData.universidade} onValueChange={(value) => setFormData({ ...formData, universidade: value })}>
                 <SelectTrigger className="input">
                   <SelectValue placeholder="Selecione sua Faculdade" />
                 </SelectTrigger>
@@ -71,11 +100,11 @@ export default function RegisterPage() {
             </label>
             <label className="flex flex-col">
               Curso:
-              <input type="text" required className="input" />
+              <input type="text" name="curso" value={formData.curso} onChange={handleChange} required className="input" />
             </label>
             <label className="flex flex-col">
               Turno:
-              <Select>
+              <Select value={formData.turno} onValueChange={(value) => setFormData({ ...formData, turno: value })}>
                 <SelectTrigger className="input">
                   <SelectValue placeholder="Selecione seu turno" />
                 </SelectTrigger>
@@ -89,19 +118,11 @@ export default function RegisterPage() {
 
             <label className="flex flex-col">
               Criar Senha:
-              <input
-                type="password"
-                required
-                className="input"
-              />
+              <input type="password" name="senha" value={formData.senha} onChange={handleChange} required className="input" />
             </label>
             <label className="flex flex-col">
               Confirmar Senha:
-              <input
-                type="password"
-                required
-                className="input"
-              />
+              <input type="password" name="confirmarSenha" value={formData.confirmarSenha} onChange={handleChange} required className="input" />
             </label>
 
             <label className="flex items-center mt-5">
@@ -118,15 +139,15 @@ export default function RegisterPage() {
                 <h2 className="text-xl mb-4">Detalhes do Veículo</h2>
                 <label className="flex flex-col mt-3">
                   Modelo do Carro:
-                  <input type="text" required className="input" />
+                  <input type="text" name="modeloCarro" value={formData.modeloCarro} onChange={handleChange} required className="input" />
                 </label>
                 <label className="flex flex-col mt-3">
                   Placa do Veículo:
-                  <input type="text" required className="input" />
+                  <input type="text" name="placaCarro" value={formData.placaCarro} onChange={handleChange} required className="input" />
                 </label>
                 <label className="flex flex-col mt-3">
                   Cor do Veículo:
-                  <input type="text" required className="input" />
+                  <input type="text" name="corCarro" value={formData.corCarro} onChange={handleChange} required className="input" />
                 </label>
               </div>
             )}
@@ -136,13 +157,13 @@ export default function RegisterPage() {
             </button>
           </form>
           <div className="flex justify-center mt-4">
-          <p className="text-sm">
-            Já possui login?{" "}
-            <Link href="/login" className="text-roxoText font-bold">
-              Entre aqui
-            </Link>
-          </p>
-        </div>
+            <p className="text-sm">
+              Já possui login?{" "}
+              <Link href="/login" className="text-roxoText font-bold">
+                Entre aqui
+              </Link>
+            </p>
+          </div>
         </div>
       </section>
     </main>
