@@ -11,10 +11,24 @@ body {
   box-sizing: border-box;
 }
 .input {
-  padding: 0.5rem;
-  color: #131313;
+  padding: 0.2rem;
+  color: white;
   padding-left: 1rem;
   border-radius: 0.5rem;
   background: linear-gradient(to right, #4E187D, #131313);
   border: 2px solid #8434CB; 
+}
+
+.button{
+  background-color: #8434CB;
+  padding: 0.40rem;
+  border-radius: 60px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transition: 300ms;
+}
+
+.button:hover
+{
+  background-color:#4E187D;
 }
