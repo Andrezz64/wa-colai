@@ -136,7 +136,6 @@ export default function Home() {
             </ul>
               <ul className="flex flex-col">
               <a href="/"className="flex items-center"><InstagramLogo size={23} />@rollbackalea</a>
-              
               </ul>
           </div>
         </footer>
