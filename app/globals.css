@@ -2,37 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-  @apply bg-[#131313] text-white p-0 m-0;
-  box-sizing: border-box;
+  @apply bg-[#131313] text-white p-0 m-0 box-border;
 }
+
 .input {
-  padding: 0.2rem;
-  color: white;
-  padding-left: 1rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(to right, #4E187D, #131313);
-  border: 2px solid #8434CB; 
-}
-.button{
-  background-color: #8434CB;
-  padding: 0.40rem;
-  border-radius: 60px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  transition: 300ms;
+  @apply p-2 text-white pl-4 rounded-lg bg-gradient-to-r from-[#4E187D] to-[#131313] border-2 border-[#8434CB];
 }
 
-.button:hover
-{
-  background-color:#4E187D;
+.button {
+  @apply bg-[#8434CB] py-2 rounded-full px-8 transition duration-300;
 }
 
-  @apply p-3 pl-4 rounded-lg bg-gradient-to-r from-[#4E187D] to-[#131313] border-2 border-[#8434CB] 
-    text-white focus:border-purple-500 focus:ring-0 hover:opacity-90;
+.button:hover {
+  @apply bg-[#4E187D];
 }
-
 
 @layer base {
   :root {
@@ -64,7 +48,6 @@ body {
   }
 }
 
-
 @layer base {
   .dark {
     --background: 0 0% 3.9%;
@@ -94,10 +77,10 @@ body {
   }
 }
 
-
-@layer base {
-  * {
-    @apply border-border;
+/* Removido o @apply no seletor universal */
+/* Se você quiser aplicar uma borda padrão, crie uma classe específica: */
+@layer components {
+  .border-default {
+    @apply border border-border; /* Ajuste conforme necessário */
   }
 }
-
