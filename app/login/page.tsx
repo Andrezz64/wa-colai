@@ -1,6 +1,7 @@
 "use client";
 import { ArrowCircleLeft } from "@phosphor-icons/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Login() {
@@ -18,10 +19,10 @@ export default function Login() {
         [name]: value
     }));
 };
-  
+const router = useRouter()
 const handleSubmit = async (e:any) => {
   e.preventDefault()
-  console.log(request)
+  router.push("/pegar")
 }
 
   return (

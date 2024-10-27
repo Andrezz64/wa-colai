@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Header from "../Components/Header";
 import { useState } from "react";
+import Footer from "../Components/Footer";
 
 export default function Pegar() {
     
@@ -78,17 +79,18 @@ export default function Pegar() {
                                 required
                             />
                         </div>
-                        <button className="button">
+                        <a className="button" href="/trips">
                             <Image
                                 src="/LogoBtn.svg"
                                 alt="Logo"
                                 width={90}
                                 height={90}
                             />
-                        </button>
+                        </a>
                     </form>
                 </div>
             </main>
+
         </div>
     );
 }

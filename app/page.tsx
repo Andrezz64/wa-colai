@@ -26,13 +26,14 @@ export default function Home() {
 
                 Colar
               </Link>
-              <button className="p-2 bg-transparent border-2 border-roxoBtn hover:border-roxoText hover:text-roxoText duration-200 w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg">
+              <a  href="/#conteudo" className="p-2 text-center bg-transparent border-2 border-roxoBtn hover:border-roxoText hover:text-roxoText duration-200 w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg">
                 Saiba mais
-              </button>
+              </a>
             </div>
           </div>
         </section>
         <div className="flex flex-col items-center justify-center max-w-2xl">
+          <a href="#" id="conteudo"></a>
           <section className="mb-4 text-left w-[80vw] 2xl:w-[60vw]">
             <h1 className="mb-4 font-bold text-4xl text-left">
               Por que você deve <span className="text-purple-500">Colar</span>?
@@ -110,12 +111,12 @@ export default function Home() {
                 Curta o trajeto economizando tempo e dinheiro.
               </span>
             </h3>
-            <Link href= "./register"  className="mt-5 text-center p-2 bg-roxoBtn w-[50vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
+            <Link href= "./register"  className=" max-w-[138px] mt-5 text-center p-2 bg-roxoBtn w-[50vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
               Quero Colar
             </Link>
           </div>
         </div>
-        <footer className="flex p-10 w-[100vw] max-md:hidden space-x-[40rem] bg-gradient-to-r from-[#121212] to-[#8C2EDF] justify-center items-center">
+        <footer className="flex p-10 w-[98vw] max-md:hidden space-x-[40rem] bg-gradient-to-r from-[#121212] to-[#8C2EDF] justify-center items-center">
           <div className="flex flex-col ">
             <p>Informações Gerais</p>
             <ul>
