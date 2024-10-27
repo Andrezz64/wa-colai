@@ -7,7 +7,6 @@ body {
   @apply bg-[#131313] text-white p-0 m-0;
   box-sizing: border-box;
 }
-
 .input {
   @apply p-3 pl-4 rounded-lg bg-gradient-to-r from-[#4E187D] to-[#131313] border-2 border-[#8434CB] 
     text-white focus:border-purple-500 focus:ring-0 hover:opacity-90;

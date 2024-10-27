@@ -1,7 +1,11 @@
+
 import Image from "next/image";
-import Link from "next/link";
+'use client'
+import { InstagramLogo } from "@phosphor-icons/react"
+import Link from 'next/link'
 
 export default function Home() {
+
   return (
     <div>
       <main className="flex flex-col items-center">
@@ -18,7 +22,11 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-8 flex gap-4 640px:gap-6 w-[80vw] max-w-[480px] 640px:max-w-[600px] 1024px:max-w-[800px] mx-auto">
+
               <Link href="/register" className="flex items-center justify-center p-2 bg-roxoBtn w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
+
+              <Link href={"/login"} className="p-2 bg-roxoBtn text-center w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
+
                 Colar
               </Link>
               <button className="p-2 bg-transparent border-2 border-roxoBtn hover:border-roxoText hover:text-roxoText duration-200 w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg">
@@ -110,6 +118,31 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <footer className="flex p-10 w-[100vw] max-md:hidden space-x-[40rem] bg-gradient-to-r from-[#121212] to-[#8C2EDF] justify-center items-center">
+          <div className="flex flex-col ">
+            <p>Informações Gerais</p>
+            <ul>
+              <li>
+                <a href="">FAQ</a>
+              </li>
+              <li>
+                <a href="">Segurança</a>
+              </li>
+              <li>
+                <a href="">Sobre</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex">
+              <li>EmailRealTop@dominioreal.com</li>
+            </ul>
+              <ul className="flex flex-col">
+              <a href=""className="flex items-center"><InstagramLogo size={23} />@rollbackalea</a>
+              
+              </ul>
+          </div>
+        </footer>
       </main>
     </div>
   );
