@@ -3,15 +3,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      {/* <header className="bg-[#131313] p-[2vh] flex justify-center items-center">
-        <Image
-          src="/Logo.svg"
-          alt="Logo"
-          width={500}
-          height={300}
-          className="w-40 h-40"
-        />
-      </header> */}
       <main className="flex flex-col items-center">
         <section className="mb-[10vh]">
           <div className="h-[100vh] w-[99vw] lg:items-start lg:w-[99vw] flex justify-center flex-col bg-[url('./carro.png')] bg-cover bg-center ">
@@ -114,8 +105,6 @@ export default function Home() {
             <button className="p-2 bg-roxoBtn w-[20vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
                 Quero Colar
             </button>
-            <div>
-            </div>
           </div>
         </div>
       </main>

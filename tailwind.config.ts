@@ -25,6 +25,9 @@ const config: Config = {
         'xl': '1280px',
         '2xl': '1536px',
       },
+      backgroundImage: {
+        'back-register': "url('./backRegister.png')",
+      },
     },
   },
   plugins: [],
