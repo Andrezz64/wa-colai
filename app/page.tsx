@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
       <main className="flex flex-col items-center">
         <section className="mb-[10vh]">
-          <div className="h-[100vh] w-[99vw] lg:items-start lg:w-[99vw] flex justify-center flex-col bg-[url('./carro.png')] bg-cover bg-center ">
-            <div className="flex flex-col  items-center w-[90%] max-w-[480px] 640px:max-w-[600px] 1024px:max-w-[800px] mx-auto text-center">
-              <p className="text-2xl  md:text-[3rem] 480px:text-3xl 768px:text-4xl font-semibold w-full max-w-[80%]">
+          <div className="h-[70vh] w-[99vw] lg:items-start flex justify-center flex-col bg-[url('./carro.png')] bg-cover bg-center">
+            <div className="flex flex-col items-center w-[90%] max-w-[480px] 640px:max-w-[600px] 1024px:max-w-[800px] mx-auto text-center">
+              <p className="text-2xl md:text-[3rem] 480px:text-3xl 768px:text-4xl font-semibold w-full max-w-[80%]">
                 Vá para a aula com sua carona no{" "}
                 <span className="text-roxoText">colaí</span>
               </p>
@@ -17,9 +18,9 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-8 flex gap-4 640px:gap-6 w-[80vw] max-w-[480px] 640px:max-w-[600px] 1024px:max-w-[800px] mx-auto">
-              <button className="p-2 bg-roxoBtn w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
+              <Link href="/register" className="flex items-center justify-center p-2 bg-roxoBtn w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
                 Colar
-              </button>
+              </Link>
               <button className="p-2 bg-transparent border-2 border-roxoBtn hover:border-roxoText hover:text-roxoText duration-200 w-[40vw] 640px:w-[20vw] rounded-xl 768px:rounded-2xl text-lg">
                 Saiba mais
               </button>
@@ -75,10 +76,12 @@ export default function Home() {
               e sustentável para todos.
             </p>
           </section>
-          <div className="h-[90vh] w-[99vw] lg:pl-[20vw] flex justify-end pb-[10rem] pl-[5vw] items-start  mt-10 mb-10 flex flex-col bg-[url('./HomeBanner2.svg')] bg-cover bg-center sm:rounded-3xl">
-          <p className="text-[3rem] max-md:text-[2rem]"><span className="text-roxoText">Colar </span> com a gente é fácil</p>
+          <div className="h-[65vh] w-[99vw] lg:pl-[20vw] flex justify-end pb-[10rem] pl-[5vw] items-start mt-10 mb-10 flex flex-col bg-[url('./HomeBanner2.svg')] bg-cover bg-center sm:rounded-3xl">
+            <p className="text-[3rem] max-md:text-[2rem]">
+              <span className="text-roxoText">Colar </span> com a gente é fácil
+            </p>
           </div>
-          <div className=" flex items-center gap-2 flex-col justify-center mb-4 text-left w-[80vw] 2xl:w-[60vw]">
+          <div className="flex items-center gap-2 flex-col justify-center mb-4 text-left w-[80vw] 2xl:w-[60vw]">
             <h3 className="font-bold text-xl">
               1. Cadastre-se:{" "}
               <span className="font-thin">Crie seu perfil gratuito</span>
@@ -102,9 +105,9 @@ export default function Home() {
                 Curta o trajeto economizando tempo e dinheiro.
               </span>
             </h3>
-            <button className="p-2 bg-roxoBtn w-[20vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
-                Quero Colar
-            </button>
+            <Link href= "./register"  className="mt-5 p-2 bg-roxoBtn w-[50vw] rounded-xl 768px:rounded-2xl text-lg hover:bg-roxoText duration-200">
+              Quero Colar
+            </Link>
           </div>
         </div>
       </main>
